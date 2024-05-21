@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const TeamSchema = new mongoose.Schema({
-  name: String,
-  city: String,
-  listPlayers: [Number], // Player numbers
+    name: { type: String, required: true },
+    city: { type: String, required: true },
+    listPlayers: { type: [Number] }
 });
 
 module.exports = mongoose.model('Team', TeamSchema);
